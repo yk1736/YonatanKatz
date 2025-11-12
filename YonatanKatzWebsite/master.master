@@ -10,11 +10,13 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <h1>Master page start</h1>
     <div>
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
     </div>
+        <h1>Master Page stop</h1>
     </form>
 </body>
 </html>
