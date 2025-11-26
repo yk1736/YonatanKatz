@@ -4,19 +4,49 @@
 
 <html>
 <head runat="server">
-    <title></title>
+    <title>דרור יא טמבל</title>
+    
+    <style>
+    table, th, td {
+  border: 1px solid black;
+}
+    </style>
+
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <h1>Master page start</h1>
-    <div>
+     
+    <table style="height:900px; width:100%"; >
+        <center>
+
+        <tr style="height:20%">
+            <td column-span="2">
+                <h1>header</h1>
+            </td>
+        </tr>
+
+        <tr column-span="2" style="height:15%;">
+            <td column-span="2">will have buttons soon</td>
+        </tr>
+
+            <tr>
+              <td style="width:70%">
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
-    </div>
-        <h1>Master Page stop</h1>
+              </td>   
+              <td style="width:30%">
+                  will have cool gif soon
+              </td>
+            </tr>
+
+            <tr column-span="2" style="height:15%;">
+                <td>let's do it compter seince!</td>
+            </tr>
+        </center>
+    </table>
     </form>
 </body>
 </html>
