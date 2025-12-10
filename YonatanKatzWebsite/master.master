@@ -5,48 +5,49 @@
 <html>
 <head runat="server">
     <title>דרור יא טמבל</title>
-    
+
     <style>
-    table, th, td {
-  border: 1px solid black;
-}
+        table, th, td {
+            border: 1px solid black;
+        }
     </style>
 
-    <asp:ContentPlaceHolder id="head" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
-     
-    <table style="height:900px; width:100%"; >
-        <center>
+    <center>
+        <table style="height: 1500px; width: 100%; background-color: lightblue">
+            <tr style="height: 10%">
+                <th colspan="2">
+                    <h1>header</h1>
+                </th>
 
-        <tr style="height:20%">
-            <td column-span="2">
-                <h1>header</h1>
-            </td>
-        </tr>
-
-        <tr column-span="2" style="height:15%;">
-            <td column-span="2">will have buttons soon</td>
-        </tr>
-
-            <tr>
-              <td style="width:70%">
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-              </td>   
-              <td style="width:30%">
-                  will have cool gif soon
-              </td>
+            </tr>
+            <tr style="height: 5%;">
+                <th colspan="2">
+                    <a href="homepage.aspx">Home page</a>
+                    <a href="Sign in.aspx">Sign in</a>
+                </th>
             </tr>
 
-            <tr column-span="2" style="height:15%;">
-                <td>let's do it compter seince!</td>
+            <tr style="height: 80%;">
+                <td style="width: 70%;">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+                <td style="width: 30%">
+                    will have cool gif soon
+                </td>
             </tr>
-        </center>
-    </table>
-    </form>
+
+            <tr style="height: 5%;">
+                <td colspan="2">
+                    let's do it compter seince!
+                </td>
+            </tr>
+
+        </table>
+    </center>
 </body>
 </html>
