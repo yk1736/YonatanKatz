@@ -17,10 +17,11 @@
 </head>
 <body>
     <center>
-        <table style="height: 1500px; width: 100%; background-color: lightblue">
+        <table style="height: 1500px; width: 100%; background-color: mintcream">
             <tr style="height: 10%">
                 <th colspan="2">
-                    <h1>header</h1>
+                    <h1>מגמת מוזיקה</h1>
+                    <h2>תיכון כצנלסון כפר סבא</h2>
                 </th>
 
             </tr>
@@ -37,7 +38,11 @@
                     </asp:ContentPlaceHolder>
                 </td>
                 <td style="width: 30%">
-                    will have cool gif soon
+                    <h3>מסלולים יחודיים!</h3>
+                    <h3>הרכבים משלל ז'אנרים</h3>
+                    <h3>ערבי מגמה</h3>
+                    <h3>הופעות והרצאות מעניינות</h3>
+                    <h2>בואו למגמת מוזיקה</h2>
                 </td>
             </tr>
 

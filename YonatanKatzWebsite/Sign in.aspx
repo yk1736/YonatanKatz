@@ -31,6 +31,18 @@
         <input type="radio" id="answer_2.4" name="radio_2" value="ew gross">
         <label for="radio_2">ew gross</label><br />
 
+        <label for="checkbox_1">Select all numbers from 1 to 4</label><br />
+        <input type="checkbox" id="answer_3.1" name="checkbox_1" value="1"
+        <label for="checkbox_1">1</label><br />
+        <input type="checkbox" id="answer_3.2" name="checkbox_1" value="2"
+        <label for="checkbox_1">2</label><br />
+        <input type="checkbox" id="answer_3.3" name="checkbox_1" value="3"
+        <label for="checkbox_1">3</label><br />
+        <input type="checkbox" id="answer_3.4" name="checkbox_1" value="4"
+        <label for="checkbox_1">4</label><br />
+
+        <input type=""
+
     </form>
 
 </asp:Content>
