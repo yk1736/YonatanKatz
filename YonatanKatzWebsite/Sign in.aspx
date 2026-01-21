@@ -6,42 +6,36 @@
     
     <form>
 
-        <label for="text_1">First name:</label>
-        <input type="text" name="text_1" placeholder="גאגי"><br />
-        <label for="text_2">Last name:</label>
-        <input type="text" name="text_2" placeholder="שרון"><br /><br />
+        <label for="firstName">First name:</label>
+        <input type="text" id="firstName" name="firstName" placeholder="John"><br />
+        <label for="lastName">Last name:</label>
+        <input type="text" id="lastName" name="lastName" placeholder="Doe"><br /><br />
+
+        <label for="dateOfBirth">Date of birth</label>
+        <input type="date" id="dateOfBirth" name="dateOfBirth"><br /><br />
+
+        <label for="instrument">What's your instrument?</label>
+        <input type="text" id="instrument" name="instrument"><br /><br />
+        <label for=">1">How many years do you play?</label><br />
+        <label for=">1">less than a year</label>
+        <input type="radio" id=">1 year" name=">1"><br />
+        <label for="1-2">1-2 years</label>
+        <input type="radio" id="1-2 years" name="1-2"><br />
+        <label for="3-5">3-5 years</label>
+        <input type="radio" id="3-5 years" name="3-5"><br />
+        <label for="6+">more than 6 years!</label>
+        <input type="radio" id="6+ years" name="6+"><br /><br />
         
-        <label for="radio_1">Do you like this form?</label><br />
-        <input type="radio" id="answer_1.1" name="radio_1" value="yes">
-        <label for="radio_1">yes</label><br />
-        <input type="radio" id="answer_1.2" name="radio_1" value="no">
-        <label for="radio_1">no</label><br />
-        <input type="radio" id="answer_1.3" name="radio_1" value="hell yeah!">
-        <label for="radio_1">hell yeah!</label><br />
-        <input type="radio" id="answer_1.4" name="radio_1" value="maybe...">
-        <label for="radio_1">maybe...</label><br /><br />
 
-        <label for="radio_2">Are you in love with this form?</label><br />
-        <input type="radio" id="answer_2.1" name="radio_2" value="what?">
-        <label for="radio_2">what?</label><br />
-        <input type="radio" id="answer_2.2" name="radio_2" value="no!">
-        <label for="radio_2">no!</label><br />
-        <input type="radio" id="answer_2.3" name="radio_2" value="I guess">
-        <label for="radio_2">I guess</label><br />
-        <input type="radio" id="answer_2.4" name="radio_2" value="ew gross">
-        <label for="radio_2">ew gross</label><br />
+        <label for="username">Username</label><br />
+        <input type="text" id="username" name="username"><br /><br />
+        <label for="email">Email</label><br />
+        <input type="text" id="email" name="email"><br /><br />
+        <label for="password">Password</label><br />
+        <input type="text" id="password" name="password"><br /><br />
 
-        <label for="checkbox_1">Select all numbers from 1 to 4</label><br />
-        <input type="checkbox" id="answer_3.1" name="checkbox_1" value="1"
-        <label for="checkbox_1">1</label><br />
-        <input type="checkbox" id="answer_3.2" name="checkbox_1" value="2"
-        <label for="checkbox_1">2</label><br />
-        <input type="checkbox" id="answer_3.3" name="checkbox_1" value="3"
-        <label for="checkbox_1">3</label><br />
-        <input type="checkbox" id="answer_3.4" name="checkbox_1" value="4"
-        <label for="checkbox_1">4</label><br />
-
-        <input type=""
+        <label for="termsAndCondotions">I agree to the terms and conditions</label>
+        <input type="checkbox" id="agreement" name="termsAndConditions">
 
     </form>
 
