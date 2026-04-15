@@ -15,10 +15,11 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
+
 <body>
     <center>
-        <table style="height: 1500px; width: 100%; background-color: mintcream">
-            <tr style="height: 10%">
+        <table style="height: 1500px; width: 100%; background-color: snow">
+            <tr style="height: 10%; background-color: dodgerblue">
                 <th colspan="2">
                     <h1>מגמת מוזיקה</h1>
                     <h2>תיכון כצנלסון כפר סבא</h2>
@@ -27,8 +28,9 @@
             </tr>
             <tr style="height: 5%;">
                 <th colspan="2">
-                    <a href="homepage.aspx">Home page</a>
-                    <a href="Sign in.aspx">Sign in</a>
+                    <a href="homepage.aspx"><img src="כפתורים%20לאתר%20יונתן%20כץ/דף%20בית.png" alt="דף בית" /></a>
+                    <a href="SignUp.aspx"><img src="כפתורים%20לאתר%20יונתן%20כץ/הרשמה.png" alt="הרשמה" /></a>
+                    <a href="logIn.aspx"><img src="כפתורים%20לאתר%20יונתן%20כץ/התחברות.png" alt="התחברות" /></a>
                 </th>
             </tr>
 

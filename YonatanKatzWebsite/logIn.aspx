@@ -3,7 +3,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 
-<form runat="server" method="post">
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+
+    <form runat="server" method="post">
 
     <label for="username">שם משתמש</label><br />
     <input type="text" id="username" name="username"><br /><br />
@@ -12,8 +15,9 @@
 
     <input type="submit" />
 
+     <%Response.Write(st); %>
+
 </form>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 </asp:Content>
 

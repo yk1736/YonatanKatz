@@ -22,22 +22,34 @@ public partial class SignUp : System.Web.UI.Page
             string email = Request.Form["email"];
             string password = Request.Form["password"];
 
+            string sqlCheck =
+                    "SELECT * FROM Tusers " +
+                    "WHERE email = '" + email + "'";
 
-            string sqlInsert =
-                "INSERT INTO Tusers " +
-                "VALUES (" +
-                "N'" + firstname + "'," +
-                "N'" + lastname + "'," +
-                "N'" + dateOfBirth + "'," +
-                "N'" + instrument + "'," +
-                "N'" + username + "'," +
-                "N'" + email + "'," +
-                "N'" + password + "'" +
-                ")";
+            bool userExists = MyAdoHelper.IsExist(sqlCheck);
 
-            MyAdoHelper.DoQuery("MyDB.mdf", sqlInsert);
+            if (userExists)
+            {
+                stResult = "האימייל שהזנת כבר בשימוש";
+            }
+            else
+            {
+                string sqlInsert =
+                    "INSERT INTO Tusers " +
+                    "VALUES (" +
+                    "N'" + firstname + "'," +
+                    "N'" + lastname + "'," +
+                    "N'" + dateOfBirth + "'," +
+                    "N'" + instrument + "'," +
+                    "N'" + username + "'," +
+                    "N'" + email + "'," +
+                    "N'" + password + "'" +
+                    ")";
 
-            stResult = "נרשמת בהצלחה!";
+                MyAdoHelper.DoQuery("MyDB.mdf", sqlInsert);
+
+                stResult = "נרשמת בהצלחה!";
+            }
         }
     }
 }

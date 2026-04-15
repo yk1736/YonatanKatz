@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 
 public partial class logIn : System.Web.UI.Page
 {
+    public string st = "";
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -23,12 +24,12 @@ public partial class logIn : System.Web.UI.Page
             else
             {
                 // בדיקת משתמש רגיל
-                string sql =
+                string sqlCheck =
                     "SELECT * FROM Tusers " +
                     "WHERE username = '" + username + "' " +
                     "AND password = '" + password + "'";
 
-                bool userExists = MyAdoHelper.IsExist(sql);
+                bool userExists = MyAdoHelper.IsExist(sqlCheck);
 
                 if (!userExists)
                 {
@@ -37,8 +38,9 @@ public partial class logIn : System.Web.UI.Page
                 else
                 {
                     // משתמש רשום
-                    Response.Redirect("home.aspx");
+                    Response.Redirect("homepage.aspx");
                 }
             }
         }
     }
+}
