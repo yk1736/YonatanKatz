@@ -17,6 +17,9 @@
 </head>
 
 <body>
+    <% if (Session["admin"]=="ok" || Session["user"]=="ok") { %>
+    שלום <%=Session["username"] %>
+    <% } %>
     <center>
         <table style="height: 1500px; width: 100%; background-color: snow">
             <tr style="height: 10%; background-color: dodgerblue">
@@ -28,18 +31,24 @@
             </tr>
             <tr style="height: 5%;">
                 <th colspan="2">
-                    <a href="homepage.aspx"><img src="כפתורים%20לאתר%20יונתן%20כץ/דף%20בית.png" alt="דף בית" /></a>
-                    <a href="SignUp.aspx"><img src="כפתורים%20לאתר%20יונתן%20כץ/הרשמה.png" alt="הרשמה" /></a>
-                    <a href="logIn.aspx"><img src="כפתורים%20לאתר%20יונתן%20כץ/התחברות.png" alt="התחברות" /></a>
+                    <a href="homepage.aspx"><img src="כפתורים%20לאתר%20יונתן%20כץ/דף%20בית.png" style="width:200px;height:100px;" alt="דף בית" /></a>
+                      <% if (Session["admin"]!="ok" && Session["user"]!="ok") { %>
+                    <a href="SignUp.aspx"><img src="כפתורים%20לאתר%20יונתן%20כץ/הרשמה.png" style="width:200px;height:100px;" alt="הרשמה" /></a>
+                    <a href="logIn.aspx"><img src="כפתורים%20לאתר%20יונתן%20כץ/התחברות.png" style="width:200px;height:100px;" alt="התחברות" /></a>
+                        <% } %>
+                        <% if (Session["admin"]=="ok" || Session["user"]=="ok") { %>
+                    <a href="logout.aspx">logout.aspx</a>
+                         <% } %>
+
                 </th>
             </tr>
 
             <tr style="height: 80%;">
-                <td style="width: 70%;">
+                <td style="width: 70%;" align="right">
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
                 </td>
-                <td style="width: 30%">
+                <td style="width: 30%" align="center">
                     <h3>מסלולים יחודיים!</h3>
                     <h3>הרכבים משלל ז'אנרים</h3>
                     <h3>ערבי מגמה</h3>
