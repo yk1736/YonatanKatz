@@ -7,6 +7,12 @@
         function checkAll() {
             firstNameErr.innerHTML = "";
             lastNameErr.innerHTML = "";
+            usernameErr.innerHTML = "";
+            passwordErr.innerHTML = "";
+            emailErr.innerHTML = "";
+            yearsPlayingErr.innerHTML = "";
+            instrumentErr.innerHTML = "";
+            dateOfBirthErr.innerHTML = "";
 
             f = true;
 
@@ -14,6 +20,19 @@
                 f = false;
             if (checkLastName() == false)
                 f = false;
+            if (checkUsername() == false)
+                f = false;
+            if (checkPassword() == false)
+                f = false;
+            if (checkEmail() == false) 
+                f = false;
+            if (checkYearsPlaying() == false) 
+                f = false;
+            if (checkInstrument() == false) 
+                f = false;
+            if (checkDateOfBirth() == false)
+                f = false;
+            
 
             return f;
         }// סוף פעולה ראשית
@@ -129,14 +148,25 @@
 
             
             if (InstrumentValue == "") {
-                InstrumentErr.innerHTML = "חובה לבחור כלי נגינה מהרשימה";
+                instrumentErr.innerHTML = "חובה לבחור כלי נגינה מהרשימה";
                 return false;
             }
 
             return true;
-        } // סוף בדיקת XXX
+        } // סוף בדיקת רשימה נפתחת
 
-    </script>
+        function checkDateOfBirth() {
+            let birthDate = document.getElementById("dateOfBirth").value;
+
+            if (birthDate == "") {
+                document.getElementById("dateOfBirthErr").innerHTML =
+                    "חובה לבחור תאריך לידה";
+                return false;
+            }
+
+            return true;
+        }
+    </script>    
 
 </asp:Content>
 
@@ -149,6 +179,7 @@
         <label for="firstName">שם פרטי:</label>
         <input type="text" id="firstName" name="firstName" placeholder="John">
         <span id="firstNameErr"></span><br />
+
         <label for="lastName">שם משפחה:</label>
         <input type="text" id="lastName" name="lastName" placeholder="Doe">
         <span id="lastNameErr"></span><br /><br />
@@ -158,29 +189,45 @@
         <span id="dateOfBirthErr"></span><br /><br />
 
         <label for="instrument">מהו הכלי שלך?</label>
-        <input type="text" id="instrument" name="instrument">
+        <select id="instrument" name="instrument">
+            <option value="">-- אנא בחר כלי נגינה --</option>
+            <option value="piano">פסנתר</option>
+            <option value="guitar">גיטרה</option>
+            <option value="drums">תופים</option>
+            <option value="bassGuitar">בס</option>
+            <option value="singer">זמר/ת</option>
+            <option value="percussion">כלי הקשה</option>
+            <option value="strings">כלי קשת</option>
+            <option value="brass">כלי נשיפה</option>
+            <option value="other">אחר</option>
+        </select>
         <span id="instrumentErr"></span><br /><br />
-        <label for=">1">כמה שנים את/ה מנגן/ת?</label><br />
-        <label for=">1">less than a year</label>
-        <input type="radio" id=">1year" name=">1">
-        <span id=">1yearErr"></span><br />
-        <label for="1-2">1-2 years</label>
-        <input type="radio" id="1-2years" name="1-2">
-        <span id="1-2yearsErr"></span><br />
-        <label for="3-5">3-5 years</label>
-        <input type="radio" id="3-5years" name="3-5">
-        <span id="3-5yearsErr"></span><br />
-        <label for="6+">more than 6 years!</label>
-        <input type="radio" id="6+years" name="6+">
-        <span id="6+yearsErr"></span><br /><br />
+
+<label>כמה שנים את/ה מנגן/ת?</label><br />
+
+<input type="radio" id="lessThan1Year" name="option" value="lessThan1Year">
+<label for="lessThan1Year">Less than a year</label><br />
+
+<input type="radio" id="years1to2" name="option" value="years1to2">
+<label for="years1to2">1-2 years</label><br />
+
+<input type="radio" id="years3to5" name="option" value="years3to5">
+<label for="years3to5">3-5 years</label><br />
+
+<input type="radio" id="moreThan6Years" name="option" value="moreThan6Years">
+<label for="moreThan6Years">More than 6 years</label><br />
+
+<span id="yearsPlayingErr"></span>
         
 
         <label for="username">שם משתמש</label><br />
         <input type="text" id="username" name="username">
         <span id="usernameErr"></span><br /><br />
+
         <label for="email">אימייל</label><br />
         <input type="text" id="email" name="email">
         <span id="emailErr"></span><br /><br />
+
         <label for="password">סיסמה</label><br />
         <input type="text" id="password" name="password">
         <span id="passwordErr"></span><br /><br />
