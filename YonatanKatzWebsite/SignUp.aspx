@@ -38,6 +38,102 @@
                 return false;
             }
             return true;
+        } // סוף בדיקת שם משפחה
+
+        function checkUsername() {
+            Uname = document.getElementById("username").value;
+
+            // 1. בדיקת אורך
+            if (Uname.length < 4 || Uname.length > 12) {
+                usernameErr.innerHTML = "שם המשתמש חייב להיות בין 4 ל-12 תווים";
+                return false;
+            }
+
+            // 2. בדיקה ששם המשתמש מכיל רק אותיות באנגלית (ללא מספרים או סימנים)
+            if (!Uname.match(/^[a-zA-Z]+$/)) {
+                usernameErr.innerHTML = "שם המשתמש חייב להכיל אותיות באנגלית בלבד";
+                return false;
+            }
+
+            return true;
+        } // סוף בדיקת שם משתמש
+
+        function checkPassword() {
+            Pass = document.getElementById("password").value;
+
+            // 1. בדיקת אורך
+            if (Pass.length < 6 || Pass.length > 20) {
+                passwordErr.innerHTML = "הסיסמה חייבת להיות בין 6 ל-20 תווים";
+                return false;
+            }
+
+            // 2. בדיקה שיש לפחות אות גדולה אחת באנגלית (A-Z)
+            if (!Pass.match(/[A-Z]/)) {
+                passwordErr.innerHTML = "הסיסמה חייבת להכיל לפחות אות גדולה אחת";
+                return false;
+            }
+
+            // 3. בדיקה שיש לפחות מספר אחד (0-9)
+            if (!Pass.match(/[0-9]/)) {
+                passwordErr.innerHTML = "הסיסמה חייבת להכיל לפחות מספר אחד";
+                return false;
+            }
+
+            return true;
+        } // סוף בדיקת סיסמה
+
+        function checkEmail() {
+            Mail = document.getElementById("email").value;
+
+            // 1. בדיקה שהשדה לא ריק
+            if (Mail.length == 0) {
+                emailErr.innerHTML = "חובה להזין כתובת אימייל";
+                return false;
+            }
+
+            // 2. בדיקת מבנה תקין של אימייל (מכיל @, נקודה וסיומת)
+            if (!Mail.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
+                emailErr.innerHTML = "כתובת האימייל אינה תקינה";
+                return false;
+            }
+
+            return true;
+        } // סוף בדיקת אימייל
+
+        function checkYearsPlaying() {
+            
+            const optionButtons = document.getElementsByName("option");
+
+            
+            let isSelected = false;
+
+            
+            for (let i = 0; i < optionButtons.length; i++) {
+                if (optionButtons[i].checked == true) {
+                    isSelected = true; 
+                }
+            }
+
+            
+            if (isSelected == false) {
+                yearsPlayingErr.innerHTML = "חובה לבחור אפשרות";
+                return false;
+            }
+
+            return true;
+        } // סוף בדיקת כפתורי רדיו
+
+        function checkInstrument() {
+            
+            InstrumentValue = document.getElementById("instrument").value;
+
+            
+            if (InstrumentValue == "") {
+                InstrumentErr.innerHTML = "חובה לבחור כלי נגינה מהרשימה";
+                return false;
+            }
+
+            return true;
         } // סוף בדיקת XXX
 
     </script>
