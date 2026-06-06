@@ -13,6 +13,7 @@
             yearsPlayingErr.innerHTML = "";
             instrumentErr.innerHTML = "";
             dateOfBirthErr.innerHTML = "";
+            termsErr.innerHTML = "";
 
             f = true;
 
@@ -31,6 +32,8 @@
             if (checkInstrument() == false) 
                 f = false;
             if (checkDateOfBirth() == false)
+                f = false;
+            if (checkTerms() == false)
                 f = false;
             
 
@@ -166,6 +169,18 @@
 
             return true;
         }
+
+        function checkTerms() {
+            
+            const terms = document.getElementById("check");
+
+            if (terms.checked == false) {
+                termsErr.innerHTML = "חובה לאשר את תנאי השימוש כדי להירשם";
+                return false;
+            }
+
+            return true;
+        } // סוף בדיקת תנאי שימוש
     </script>    
 
 </asp:Content>
@@ -231,6 +246,10 @@
         <label for="password">סיסמה</label><br />
         <input type="text" id="password" name="password">
         <span id="passwordErr"></span><br /><br />
+
+        <label for="terms">אני מאשר/ת את תנאי השימוש</label><br />
+        <input type="checkbox" id="check" name="check">
+        <span id="termsErr"></span><br /><br />
 
         <input type="submit" />
 
