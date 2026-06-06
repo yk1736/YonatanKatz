@@ -7,7 +7,7 @@
     <title>שני מורים זה החיים</title>
 
     <style>
-        table, th, td {
+        .tb {
             border: 1px solid black;
         }
     </style>
@@ -17,14 +17,12 @@
 </head>
 
 <body>
-    <% if (Session["admin"]=="ok" || Session["user"]=="ok") { %>
-    שלום <%=Session["username"] %>
-    <% } %>
+
     <center>
-        <table style="height: 1200px; width: 100%; background-color: powderblue">
+        <table style="height: 1200px; width: 100%; background-color: powderblue" class="tb">
 
             <tr style="height: 10%; background-color: dodgerblue">
-                <th colspan="2">
+                <th colspan="2" class="tb">
                     <img src="https://katzanelson.mashov.info/wp-content/uploads/sites/89/2022/05/%D7%9C%D7%95%D7%92%D7%95-%D7%9B%D7%A6%D7%94-%D7%90%D7%99%D7%9B%D7%95%D7%AA%D7%99.jpg" style="float: left; height: 15%; width: 180px"/>
                     <h1>מגמת מוזיקה</h1>
                     <h2>תיכון כצנלסון כפר סבא</h2>
@@ -33,27 +31,36 @@
 
             </tr>
             <tr style="height: 10%;">
-                <th colspan="2">
-                    <a href="homepage.aspx"><img src="כפתורים%20לאתר%20יונתן%20כץ/דף%20בית.png" style="width:200px;height:100px;" alt="דף בית" /></a>
+                <th colspan="2" class="tb">
+                    <a href="homepage.aspx">
+                        <img src="כפתורים%20לאתר%20יונתן%20כץ/Untitled%20presentation%20(2).png" style="width:200px;height:100px;" alt="דף בית" /></a>
                       <% if (Session["admin"]!="ok" && Session["user"]!="ok") { %>
-                    <a href="SignUp.aspx"><img src="כפתורים%20לאתר%20יונתן%20כץ/הרשמה.png" style="width:200px;height:100px;" alt="הרשמה" /></a>
-                    <a href="logIn.aspx"><img src="כפתורים%20לאתר%20יונתן%20כץ/התחברות.png" style="width:200px;height:100px;" alt="התחברות" /></a>
+                    <a href="SignUp.aspx">
+                        <img src="כפתורים%20לאתר%20יונתן%20כץ/Untitled%20presentation%20(3).png" style="width:200px;height:100px;" alt="הרשמה" /></a>
+                    <a href="logIn.aspx">
+                        <img src="כפתורים%20לאתר%20יונתן%20כץ/Untitled%20presentation%20(7).png" style="width:200px;height:100px;" alt="התחברות" /></a>
                         <% } %>
                         <% if (Session["admin"]=="ok" || Session["user"]=="ok") { %>
-                    <a href="logout.aspx">logout.aspx</a>
+                    <a href="logout.aspx"><img src="כפתורים%20לאתר%20יונתן%20כץ/Untitled%20presentation%20(4).png" style="width:200px;height:100px;" alt="התנתקות"/></a>
                          <% } %>
-                    <a href="gallery.aspx">gallery</a>
-                    <a href="about.aspx">about</a>
+                    <a href="gallery.aspx"><img src="כפתורים%20לאתר%20יונתן%20כץ/Untitled%20presentation%20(1).png" style="width:200px;height:100px;" alt="גלריה"/></a>
+                    <a href="about.aspx"><img src="כפתורים%20לאתר%20יונתן%20כץ/Untitled%20presentation%20(5).png" style="width:200px;height:100px;" alt="אודות"/></a>
 
                 </th>
             </tr>
 
             <tr style="height: 70%;">
-                <td style="width: 70%;" align="right">
+                <td style="width: 70%;" align="right" class="tb">
+
+<% if (Session["admin"]=="ok" || Session["user"]=="ok") { %>
+שלום <%=Session["username"] %>
+<% } %>
+
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
+
                 </td>
-                <td style="width: 30%" align="center">
+                <td style="width: 30%" align="center" class="tb">
                     <h3>מסלולים יחודיים!</h3>
                     <h3>הרכבים משלל ז'אנרים</h3>
                     <h3>ערבי מגמה</h3>
@@ -65,7 +72,7 @@
             </tr>
 
             <tr style="height: 10%;">
-                <td colspan="2">
+                <td colspan="2" class="tb">
                    <h2 style="text-align: right">:ערבי המגמה הבאים</h2><h4 style="text-align: right">ערב ביצוע קול - 4.6   //   בגרות בתזמור והלחנה - 12.6   //   בגרות בג'אז ואלתור - 12.6   //   ערב מקהלות - 15.6</h4>
                 <!--let's do it compter seince-->
                 </td>
