@@ -10,6 +10,10 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
+    <% if (Session["admin"]=="ok" || Session["user"]=="ok") { %>
+שלום <%=Session["username"] %>
+<% } %>
+
     <center>
 
     <h1>ברוכים הבאים!</h1>

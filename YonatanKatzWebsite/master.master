@@ -4,7 +4,7 @@
 
 <html>
 <head runat="server">
-    <title>שני מורים זה החיים</title>
+    <title>מגמת מוזיקה - תיכון כצנלסון כפר סבא</title>
 
     <style>
         .tb {
@@ -43,6 +43,9 @@
                         <% if (Session["admin"]=="ok" || Session["user"]=="ok") { %>
                     <a href="logout.aspx"><img src="כפתורים%20לאתר%20יונתן%20כץ/Untitled%20presentation%20(4).png" style="width:200px;height:100px;" alt="התנתקות"/></a>
                          <% } %>
+                        <% if (Session["admin"]=="ok") { %>
+                    <a href="Manager.aspx"><img src="כפתורים%20לאתר%20יונתן%20כץ/Untitled%20presentation%20(8).png" style="width:200px;height:100px;" alt="דף מנהל" /></a>
+                        <% } %>
                     <a href="gallery.aspx"><img src="כפתורים%20לאתר%20יונתן%20כץ/Untitled%20presentation%20(1).png" style="width:200px;height:100px;" alt="גלריה"/></a>
                     <a href="about.aspx"><img src="כפתורים%20לאתר%20יונתן%20כץ/Untitled%20presentation%20(5).png" style="width:200px;height:100px;" alt="אודות"/></a>
 
@@ -52,9 +55,7 @@
             <tr style="height: 70%;">
                 <td style="width: 70%;" align="right" class="tb">
 
-<% if (Session["admin"]=="ok" || Session["user"]=="ok") { %>
-שלום <%=Session["username"] %>
-<% } %>
+
 
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>

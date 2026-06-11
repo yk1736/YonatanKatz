@@ -11,7 +11,7 @@
     <label for="username">שם משתמש</label><br />
     <input type="text" id="username" name="username"><br /><br />
     <label for="password">סיסמה</label><br />
-    <input type="text" id="password" name="password"><br /><br />
+    <input type="password" id="password" name="password"><br /><br />
 
     <input type="submit" />
 

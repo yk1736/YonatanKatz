@@ -244,7 +244,7 @@
         <span id="emailErr"></span><br /><br />
 
         <label for="password">סיסמה</label><br />
-        <input type="text" id="password" name="password">
+        <input type="password" id="password" name="password">
         <span id="passwordErr"></span><br /><br />
 
         <label for="terms">אני מאשר/ת את תנאי השימוש</label><br />
